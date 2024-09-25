@@ -32,11 +32,16 @@ qian_zi_wen = "天地玄黄宇宙洪荒日月盈昃辰宿列张寒来暑往秋�
             "驴骡犊特骇跃超骧诛斩贼盗捕获叛亡布射僚丸嵇琴阮啸恬笔伦纸钧巧任钓释纷利俗并皆佳妙毛施淑姿工颦妍笑年矢每催曦晖朗曜" \
             "璇玑悬斡晦魄环照指薪修祜永绥吉劭矩步引领俯仰廊庙束带矜庄徘徊瞻眺孤陋寡闻愚蒙等诮谓语助者焉哉乎也"
 
-
-def classic_index(book, index):
-    if(book == '百家姓'):
-        return bai_jia_xing[index - 1]
-    elif(book == '千字文'):
-        return qian_zi_wen[index - 1]
+def classic_index(books, index):
+    if(books == '百家姓'):
+        if len(bai_jia_xing) >= index > 0:
+            return bai_jia_xing[index - 1]
+        else:
+            return "classic_index: Index out of range"
+    elif(books == '千字文'):
+        if len(qian_zi_wen) >= index > 0:
+            return qian_zi_wen[index - 1]
+        else:
+            return "classic_index: Index out of range"
     else:
-        return "classic_index: No such book"
+        return "classic_index: No such books"

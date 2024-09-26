@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import classics
+from . import classics, idiom
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('classics/', classics.classics)
+    path('classics/', classics.classics),
+    path('idiom/', idiom.idiom)
 ]

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/idiom/" method="post">
+    {% csrf_token %}
+    <input type="text" name="sm1" id="sm1"><input type="text" name="ym1" id="ym1"><input type="text" name="sd1" id="sd1"><br>
+    <input type="text" name="sm2" id="sm2"><input type="text" name="ym2" id="ym2"><input type="text" name="sd2" id="sd2"><br>
+    <input type="text" name="sm3" id="sm3"><input type="text" name="ym3" id="ym3"><input type="text" name="sd3" id="sd3"><br>
+    <input type="text" name="sm4" id="sm4"><input type="text" name="ym4" id="ym4"><input type="text" name="sd4" id="sd4"><br>
+    <input type="submit">
+</form>
+<p>{{result}}</p>
+</body>
+</html>
